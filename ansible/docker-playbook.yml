@@ -74,9 +74,9 @@
       clone: yes 
       update: yes 
 
-  - name: Run `docker-compose up` again
-    community.docker.docker_compose:
-      project_src: jonathanfe-docker
-      build: yes 
-    register: output
+  # - name: Run `docker-compose up` again
+  #   community.docker.docker_compose:
+  #     project_src: jonathanfe-docker
+  #     build: yes 
+  #   register: output
   
