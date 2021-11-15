@@ -17,7 +17,7 @@ jobs:
             playbook: ansible/docker-playbook.yml
             inventory: ansible/inventory.yml
             private_key: ${{secrets.PRIVATE_KEY}}
-            user: testadmin  
+            user: jonathanfe   
         env:
             ANSIBLE_HOST_KEY_CHECKING: 'false'
             ANSIBLE_DEPRECATION_WARNINGS: 'false'
