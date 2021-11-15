@@ -14,8 +14,8 @@ jobs:
       - name: Ansible playbook
         uses: arillso/action.playbook@master
         with:
-            playbook: ansible/testplaybook.yml
-            inventory: ansible/inventory/prod.yml
+            playbook: ansible/docker-playbook.yml
+            inventory: ansible/inventory.yml
             private_key: ${{secrets.PRIVATE_KEY}}
             user: testadmin  
         env:
