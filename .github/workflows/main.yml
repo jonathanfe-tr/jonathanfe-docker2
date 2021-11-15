@@ -1,0 +1,23 @@
+name: Docker 
+
+
+on:
+
+  push:
+    branches: [ dev ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Ansible playbook
+        uses: arillso/action.playbook@master
+        with:
+            playbook: ansible/testplaybook.yml
+            inventory: ansible/inventory/prod.yml
+            private_key: ${{secrets.PRIVATE_KEY}}
+            user: testadmin  
+        env:
+            ANSIBLE_HOST_KEY_CHECKING: 'false'
+            ANSIBLE_DEPRECATION_WARNINGS: 'false'
